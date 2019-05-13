@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+    
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <div class="menu-navegacion"><a class="link external" href="inicio.html">Home</a></div>
+            <div class="menu-navegacion"><a class="link external" href="vuelo.html">Vuelo</a></div>
+            <div class="menu-navegacion"><a class="link external" href="hoteles.html">Hoteles</a></div>
+            <div class="menu-navegacion"><a class="link external" href="promos.html">Paquetes</a></div>
+            <div class="menu-navegacion"><a class="link external" href="testimonios.html">Testimonios</a></div><!--links externos-->
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <i class="icon icon-back" id="back"></i>
+                    <div class="center sliding" id="smart"><img src="img/smart-travel.jpg" alt="">SMART TRAVEL</div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a><!--habilita la opcion del panel del costado-->
+                    </div>
+                </div>
+            </div>
+            <div class="pages navbar-through toolbar-through"><!-- el espacio que da entra el titulo Smart Travek y la pagina index-->
+                <div data-page="index" class="page"><!--pagina index-->
+                    <div class="page-content">
+                        <div class="content-block" id="paquete">
+                            <img src="img/banner-paquetes.jpg" alt="">
+                        </div>
+                            <div class="promociones">
+                                <div class="paquetes-promociones">
+                                    <div class="promos">
+                                        <a href=""><img src="img/paquetePromoLondresParis.jpg" alt=""></a>
+                                        <p class="promo">Circuito París y Londres</p>
+                                        <button id="abrirVentanaPaqueteUno" onclick="changeImgCircuito()">Ver Detalles</button>
+                                            <div class="ventanaPaqueteUno">
+                                                    <div id="paquetes-slider">
+                                                        <div id="sliderPaquetes">
+                                                            <img id="slideCircuito" >
+                                                        </div>
+                                                    </div>
+                                                    <div class="textoPaquete">
+                                                       <p>Con las ofertas de SMART TRAVEL puede tener ya su paquete de viaje a Londres y París,dos capitales europeas muy concurridas por turistas de cualquier parte del mundo. En París descubrirá lo más profundo del arte francés visitando el famoso museo del Louvre, Versalles, la fantástica Torre Eiffel o el bohemio barrio de Montmartre, donde los mejores pintores de la historia del arte han dejado su huella. Por lo consiguiente, en Londres respirará otro ambiente totalmente diferente, pero muy dinámico y cultural, donde la Catedral del Big Ben y su famoso reloj le transportarán a la época del 1858, así como sus populares cabinas y transportes públicos de color rojo</p>
+                                                    </div>  
+                                                <button id="reservar">Comprar</button>
+                                                <button class="cerrarPaqueteUno">Atras</button>
+                                            </div>
+                                    </div>
+                                    <div class="promos">
+                                        <a href=""><img src="img/paqueteSalta.jpg" alt=""></a>
+                                        <p class="promo">Norte Mágico (Salta y Jujuy)</p>
+                                        <button id="abrirVentanaPaqueteDos" onclick="changeImgCircuitoNorte()">Ver Detalles</button>
+                                            <div class="ventanaPaqueteDos">
+                                                    <div id="paquetes-slider">
+                                                        <div id="sliderPaquetes">
+                                                            <img id="slideCircuitoNorte" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="textoPaqueteNorte">
+                                                       <p>Este paquete turístico incluye: Traslado desde Aeropuerto de Salta a hotel céntrico; City tour completo Salta, Excursión Cafayate; Excursión Cachi; Excursión Humahuaca completa; Excursion Salinas Grandes; Traslado Hotel de Salta a aeropuerto de Salta. Al momento de contratar hotelería puede contratar todas las noches en Salta o si desea una noche intermedia en Purmamarca.Cada excursión es de un día completo y el city tour es de medio día</p>
+                                                    </div>  
+                                                <button id="reservar">Comprar</button>
+                                                <button class="cerrarPaqueteDos">Atras</button>
+                                            </div>
+                                    </div>
+                                    <div class="promos">
+                                        <a href=""><img src="img/paqueteEEUU.jpg" alt=""></a>
+                                        <p class="promo">New York & Washington</p>
+                                        <button id="abrirVentanaPaqueteTres" onclick="changeImgCircuitoEEUU()">Ver Detalles</button>
+                                            <div class="ventanaPaqueteTres">
+                                                    <div id="paquetes-slider">
+                                                        <div id="sliderPaquetes">
+                                                            <img id="slideCircuitoEEUU" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="textoPaquete">
+                                                       <p>Combina en un solo viaje el encanto de 2 de las ciudades más importantes de Estados Unidos.Nueva York ya es bastante conocida, aunque nunca hayas estado; visita sus rincones más emblemáticos, como el Central Park, Manhattan, Times Square, la Estatua de la Libertad... Ahora tienes la oportunidad de visitarla junto a Washington, capital de Estados Unidos y ciudad con un impresionante complejo museístico, la Smithsonian Institution y una trepidante vida nocturna en el barrio de Georgetown, donde se respira un aire europeo y colonial.</p>
+                                                    </div>  
+                                                <button id="reservar">Comprar</button>
+                                                <button class="cerrarPaqueteTres">Atras</button>
+                                            </div>
+                                    </div>
+                                    <div class="promos">
+                                        <a href=""><img src="img/paqueteRioo.jpg" alt=""></a>
+                                        <p class="promo">Rio de Janeiro</p>
+                                        <button id="abrirVentanaPaqueteCuatro" onclick="changeImgCircuitoRio()">Ver Detalles</button>
+                                            <div class="ventanaPaqueteCuatro">
+                                                    <div id="paquetes-slider">
+                                                        <div id="sliderPaquetes">
+                                                            <img id="slideCircuitoRio" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="textoPaquete">
+                                                       <p>Su conjunto de encantos naturales despierta una superior sensualidad, las playas de inigualable hermosura y amaneceres únicos son características fundamentales de esta ciudad carioca pletórica de felicidad y frescura. Su nombre completo es Sao Sebastiao do Rio de Janeiro. Es la segunda ciudad más poblada de Brasil. Tiempo atrás fue la capital del país. Considerada uno de los destinos predilectos de los habitantes de América del Sur. Reconocida mundialmente por la estatua del Cristo Redentor, las playas extraordinarias de Copacabana e Ipanema, el Parque Nacional de Tijuca, el estadio Maracaná, sus famosos y ostentosos carnavales, sus bailes característicos y el samba.</p>
+                                                    </div>  
+                                                <button id="reservar">Comprar</button>
+                                                <button class="cerrarPaqueteCuatro">Atras</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <!--<div class="toolbar">
+                <div class="toolbar-inner">
+                    
+                    <a href="" class="link">Link 1</a>
+                    <a href="link1.html" class="link">Link 2</a>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+     <script src="js/script.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

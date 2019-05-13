@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="contenido">
+            <img src="img/fondo.jpg" alt="">
+        </div>
+
+        <div id="iniciar-sesion">
+            <button id="iniciar">Iniciar Sesion</button>
+        </div>
+        <div class="contendi-modal">
+            <div class="modal-sesion">
+                <img src="img/smart-travel.jpg" alt="">
+                <div class="formulario-sesion">
+                    <h2>Bienvenido</h2>
+                    <form id="formulario">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="email" placeholder="User" id="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Password" id="password">
+                        </div>
+                        <input type="button" name="" value="Entrar" id="entrar">
+                        <div class="cancelar">
+                            <input type="submit" name="" value="Cancelar" class="cancelar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="js/jquery-3.4.1.min.js"></script>
+ <script type="text/javascript" src="js/script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAbMdH_1DP0o6-nscDq6oeqfpOPW3BGrzQ",
+    authDomain: "smart-travel-6a007.firebaseapp.com",
+    databaseURL: "https://smart-travel-6a007.firebaseio.com",
+    projectId: "smart-travel-6a007",
+    storageBucket: "smart-travel-6a007.appspot.com",
+    messagingSenderId: "7615692761",
+    appId: "1:7615692761:web:29d51405b803d061"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+    <script src="js/autenticacion.js"></script>
+      
+
+</body>
+</html>

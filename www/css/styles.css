@@ -1,0 +1,1173 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+/*index*/
+.contenido{
+	margin-top: 2rem;
+}
+#iniciar-sesion{
+	text-align: center;
+}
+#iniciar{
+	border: none;
+	height: 3rem;
+	width: 50%;
+	background-color: white;
+	color: blue;
+	font-size: 18px;
+}
+/* formulario sesion*/
+.contenido-modal{
+	height: 100vh;
+}
+.modal-sesion{
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	color: #FFF;
+	position: fixed;
+	background-color:white;
+	top: 1%; 
+	left: 0;
+	display: none;
+	transform: scale(0.95);
+}
+.modal-sesion img{
+	margin-top: 4rem;
+	width: 230px;
+	height: 150px;
+}
+.formulario-sesion h2{
+	color: black;
+}
+.form-group{
+	border: none;
+}
+.form-group input{
+	border: none;
+	width: 70%;
+	height: 2rem;
+	border-bottom: 1px solid  #5f6a6a;
+}
+#formulario #entrar{
+	margin-top: 2rem;
+	height: 2rem;
+	width: 70%;
+	border-radius: 2px;
+	background-color: #2471a3;
+	border: none;
+	color: white;
+}
+.cancelar{
+	margin-top: 1rem;
+}
+.cancelar input{
+	border: none;
+	color: blue;
+	text-align: center;
+	background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.statusbar-overlay {
+    background: #000000;
+}
+.navbar{
+	background-color:white;
+}
+.page{
+	background-color: #ddebfa;
+}
+.navbar-inner img{
+	height: 30px;
+}
+.link{
+	color: white;
+}
+
+.panel{
+	background:#7a8693;
+}
+.content-block .menu-navegacion{
+	margin-top: 30px;
+	border-bottom: 1px solid white ;
+
+}
+.menu-navegacion .link-nav{
+ margin-top: 1rem;
+}
+
+.swiper-slide{
+	text-align: center;
+}
+.swiper-slide img{
+	width: 100%;
+	height: 15rem;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+.row{
+	background-color:  #ddebfa;
+	text-align: center;
+}
+.col-50 img{
+	height: 8rem;
+	width: 98%;
+	margin-top: 1rem;
+	border-radius: 20px;
+	
+}
+.col-50 h2{
+	font-size: 15px;
+}
+.row button{
+	border: none;
+	font-size: 20px;
+	border-radius: 10px;
+	background-color:#ddebfa;
+	color: blue; 
+}
+/*pagina index*/
+
+.login-screen-title img{
+	width: 150px;
+	height:100px;
+	margin-top: 5rem;
+}
+.contenido{
+	margin-top: 3rem;
+	text-align: center;
+}
+.contenido img{
+	width: 95%;
+	height: 70vh;
+}
+.content-block p{
+	text-align: center;
+}
+.list-block{
+	text-align: center;
+}
+.link #enviar{
+	width: 40%;
+	height: 3rem;
+	background-color: #3b71ab;
+	font-size: 15px;
+	border-radius: 5px;
+	border: none;
+	
+
+}
+
+/*pagina vuelos*/
+
+.navbar-inner #smart{
+	margin: 0 auto;
+}
+#vuelo img{
+	width: 100%;
+	height: 4rem;
+	border-radius: 15px;
+}
+
+.vuelosRecomendados h2{
+    text-align: center;
+    font-size: 20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 5px;
+}
+.imagenVuelos img{
+	margin-top: 1rem;
+    width: 95%;
+    height: 10em;
+    border-radius:30px;
+}
+.imagenVuelos p{
+    text-align: center;
+    font-size: 20px;
+    color: #1c77da;
+    border-bottom: 1px solid rgb(236, 169, 45);
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/*hoteles*/
+#hoteles img{
+	width: 100%;
+	border-radius: 15px;
+}
+.hoteles-recomendados h2{
+    text-align: center;
+    margin-top: -1rem;
+}
+.hotel{
+    margin-top: -1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.hotel1 img{
+    width: 95%;
+    height: 20em;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+.hotel1 .ubicacion-hotel {
+    text-align: center;
+    font-size: 20px;
+    color: #1c77da;
+    border-bottom: 1px solid rgb(236, 169, 45);
+    width: 50%;
+    margin: 0 auto;
+}
+.hotel1 .descripcion-hotel {
+   text-align: center;
+}
+
+
+
+/*paquetes*/
+#paquete img{
+	width: 100%;
+	border-radius: 15px;
+}
+.promociones{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.promociones h2{
+    text-align: center;
+ }
+.paquetes-promociones{
+
+    display: flex;
+    flex-flow: row wrap;    
+}
+.promos{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.promos img{
+    width: 80%;
+    height: 15em;
+    border-radius: 5px;
+}
+.promo{
+    text-align: center;
+    font-size: 20px;
+    color: #1c77da;
+    border-bottom: 1px solid rgb(236, 169, 45);
+    width: 80%;
+    margin: 0 auto;
+}
+.descripcion{
+    width: 100%;
+
+}
+
+
+
+
+/*testimonios*/
+.testimonios{
+	text-align: center;
+}
+.testimonios img{
+    text-align: center;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.container-testimonios{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    margin-top: 5em;
+    width: 100%;
+    margin-top: 2rem;
+}
+.contenedor-testimonios{
+    background-color: white;
+    padding: 2px;
+    margin: 0 auto;
+    width: 100%;
+    border:1px solid #7fb3d5;
+    border-radius: 15px;
+    margin-top: 2.8rem;
+    border-style: double;
+    border-width: 4px;
+}
+.foto-perfil{
+    text-align: center;
+    margin-top: -3em;
+}
+.foto-perfil img{
+    margin: 0 auto;
+    width: 30%;
+    height: 8em;
+    border-radius: 50%;
+}
+.contenedor-testimonios h2{
+    margin-top:0.1em;
+}
+.contenedor-testimonios h4{
+    text-align: center;
+    font-size: 18px;
+    color: #3b3c3db2;
+}
+.contenedor-testimonios p{
+    width: 100%;
+    color: #091f369d;
+}
+.contenedor-redes{
+    display:flex;
+    flex-grow: row nowrap;
+    justify-content: center;
+    margin-top: 1em;
+}
+.facebook button{
+    width: 1.5em;
+    height: 1.2em;
+    background-color: #145499;
+    border:none;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    margin: 5px;
+}
+.instagram button{
+    width: 1.5em;
+    height: 1.2em;
+    background-color: rgb(206, 16, 16);
+    border:none;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    margin: 5px;
+}
+.twiter button{
+    width: 1.5em;
+    height: 1.2em;
+    background-color: #1c77da;
+    border:none;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    margin: 5px;
+}
+.facebook button:hover{
+    background-color: #5997d8;
+    cursor: pointer;
+}
+.instagram button:hover{
+    background-color: rgb(236, 72, 72);
+    cursor: pointer;
+}
+.twiter button:hover{
+    background-color: #afcff0;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/*ventana modal*/
+.imagenVuelos {
+	text-align: center;
+}
+.imagenVuelos .ventanaNuevaYork{
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.90);
+	top: 4%; 
+	left: 0;
+	display: none;
+	transform: scale(0.95);	
+}
+.imagenVuelos #c-slider{
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+}
+.imagenVuelos #slider{
+	display: flex;
+	width: 400%;
+}
+
+#slider{
+	width: 100%;
+	height: 50vh;
+}
+
+#slider img{
+	padding: 1.5rem;
+	width: 22%;
+	height:40vh;
+	
+}
+.texto p{
+	color: white;
+	text-align: center;
+	border: none;
+	width: 90%;
+	font-size: 16px;
+	font-weight: bold;
+}
+.ventanaNuevaYork #comprar{
+	margin-top: 3rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarVentanaNuevaYork{
+	margin-top: 1rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+
+/*venecia*/
+.imagenVuelos .ventanaVenecia{
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.90);
+	top: 4%; 
+	left: 0;
+	display: none;
+	transform: scale(0.95);	
+}
+.ventanaVenecia #comprar{
+	margin-top: 3rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarVentanaVenecia{
+	margin-top: 1rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+/*miami*/
+.imagenVuelos .ventanaMiami{
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.90);
+	top: 4%; 
+	left: 0;
+	display: none;
+	transform: scale(0.95);	
+}
+.ventanaMiami #comprar{
+	margin-top: 3rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarVentanaMiami{
+	margin-top: 1rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+/*roma*/
+.imagenVuelos .ventanaRoma{
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.90);
+	top: 4%; 
+	left: 0;
+	display: none;
+	transform: scale(0.95);	
+}
+.ventanaRoma #comprar{
+	margin-top: 3rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarVentanaRoma{
+	margin-top: 1rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+
+
+/*londres*/
+.imagenVuelos .ventanaLondres{
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.90);
+	top: 4%; 
+	left: 0;
+	display: none;
+	transform: scale(0.95);	
+}
+.ventanaLondres #comprar{
+	margin-top: 3rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarVentanaLondres{
+	margin-top: 1rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+
+
+/*paris*/
+.imagenVuelos .ventanaParis{
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.90);
+	top: 4%; 
+	left: 0;
+	display: none;
+	transform: scale(0.95);	
+}
+.ventanaParis #comprar{
+	margin-top: 3rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarVentanaParis{
+	margin-top: 1rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+
+/*hotel perola*/
+.hotel1{
+	text-align: center;
+}
+#abrirVentanaHotelUno{
+	margin-top: 0.6rem;
+	height: 2.5rem;
+	width: 30%;
+	font-size: 15px;
+	border: none;
+	color: white;
+	background-color:#7fb3d5;
+	border-radius: 10px;
+}
+.ventanaHotelPerola{
+	margin: 0 auto;
+	text-align: center;
+}
+.ventanaHotelPerola{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.94);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+
+.hotel1 .ventanaHotelPerola #hotel-slider{
+	margin: 0 auto;
+	width: 100%;
+}
+.ventanaHotelPerola #sliderHotel{
+	display: flex;
+	width: 400%;
+}
+#sliderHotel{
+	width: 100%;
+	height: 50vh;
+}
+
+#sliderHotel img{
+	padding: 1.5rem;
+	width: 22%;
+	height:40vh;
+	
+}
+.textoHotel p{
+	text-align: center;
+	border: none;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 1rem;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.ventanaHotelPerola #reservar{
+	margin-top: 3rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarVentanaHotelUno{
+	margin-top: 1rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+
+
+/*Hotel Londres*/
+.ventanaHotelLondres{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.94);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+#abrirVentanaHotelDos{
+	margin-top: 0.6rem;
+	height: 2.5rem;
+	width: 30%;
+	font-size: 15px;
+	border: none;
+	color: white;
+	background-color:#7fb3d5;
+	border-radius: 10px;
+}
+.ventanaHotelLondres{
+	margin: 0 auto;
+	text-align: center;
+}
+.ventanaHotelLondres{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.95);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+
+.hotel1 .ventanaHotelLondres #hotel-slider{
+	margin: 0 auto;
+	width: 100%;
+}
+.ventanaHotelLondres #sliderHotel{
+	display: flex;
+	width: 400%;
+}
+#sliderHotel img{
+	margin-top: -0.1rem;
+}
+
+.ventanaHotelLondres #reservar{
+	margin-top: 3rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarVentanaHotelDos{
+	margin-top: 1rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+/*hotel roma*/
+.ventanaHotelRoma{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.94);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+#abrirVentanaHotelTres{
+	margin-top: 0.6rem;
+	height: 2.5rem;
+	width: 30%;
+	font-size: 15px;
+	border: none;
+	color: white;
+	background-color:#7fb3d5;
+	border-radius: 10px;
+}
+.ventanaHotelRoma{
+	margin: 0 auto;
+	text-align: center;
+}
+.ventanaHotelRoma{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.95);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+
+.hotel1 .ventanaHotelRoma #hotel-slider{
+	margin: 0 auto;
+	width: 100%;
+}
+.ventanaHotelRoma #sliderHotel{
+	display: flex;
+	width: 400%;
+}
+
+.ventanaHotelRoma #reservar{
+	margin-top: 2rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarVentanaHotelTres{
+	margin-top: 0.5rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+
+
+/*paquetes uno*/
+.promos{
+	text-align: center;
+}
+#abrirVentanaPaqueteUno{
+	margin-top: 0.6rem;
+	height: 2.5rem;
+	width: 30%;
+	font-size: 15px;
+	border: none;
+	color: white;
+	background-color:#7fb3d5;
+	border-radius: 10px;
+}
+.ventanaPaqueteUno{
+	margin: 0 auto;
+	text-align: center;
+}
+.ventanaPaqueteUno{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.95);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+
+.promos .ventanaPaqueteUno #paquetes-slider{
+	margin: 0 auto;
+	width: 100%;
+}
+.ventanaPaqueteUno #sliderPaquetes{
+	display: flex;
+	width: 400%;
+}
+
+#sliderPaquetes{
+	width: 100%;
+	height: 40vh;
+}
+
+#sliderPaquetes img{
+	padding: 1.5rem;
+	width: 22%;
+	height:35vh;
+	
+}
+.textoPaquete p{
+	text-align: center;
+	border: none;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 0.2rem;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.ventanaPaqueteUno #reservar{
+	margin-top: 1.5rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarPaqueteUno{
+	
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+
+
+/*paquete jujuy*/
+
+
+.textoPaqueteNorte p{
+	
+	text-align: center;
+	border: none;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 2rem;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+}
+.ventanaPaqueteDos{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.95);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+#abrirVentanaPaqueteDos{
+	margin-top: 0.6rem;
+	height: 2.5rem;
+	width: 30%;
+	font-size: 15px;
+	border: none;
+	color: white;
+	background-color:#7fb3d5;
+	border-radius: 10px;
+}
+.ventanaPaqueteDos{
+	margin: 0 auto;
+	text-align: center;
+}
+.ventanaPaqueteDos{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(145,200,200);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+
+.promos .ventanaPaqueteDos #paquetes-slider{
+	margin: 0 auto;
+	width: 100%;
+}
+.ventanaPaqueteDos #sliderPaquetes{
+	display: flex;
+	width: 400%;
+}
+.ventanaPaqueteDos #reservar{
+	margin-top: 1.5rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+.cerrarPaqueteDos{
+	
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+
+/*nY*/
+.ventanaPaqueteTres{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.95);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+#abrirVentanaPaqueteTres{
+	margin-top: 0.6rem;
+	height: 2.5rem;
+	width: 30%;
+	font-size: 15px;
+	border: none;
+	color: white;
+	background-color:#7fb3d5;
+	border-radius: 10px;
+}
+.ventanaPaqueteTres{
+	margin: 0 auto;
+	text-align: center;
+}
+.ventanaPaqueteTres{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(145,200,200);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+
+.promos .ventanaPaqueteTres #paquetes-slider{
+	margin: 0 auto;
+	width: 100%;
+}
+.ventanaPaqueteTres #sliderPaquetes{
+	display: flex;
+	width: 400%;
+}
+.ventanaPaqueteTres #reservar{
+	margin-top: 1.5rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+
+.cerrarPaqueteTres{
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+
+/*nose*/
+.ventanaPaqueteCuatro{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(0,0,0,.95);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+
+}
+#abrirVentanaPaqueteCuatro{
+	margin-top: 0.6rem;
+	height: 2.5rem;
+	width: 30%;
+	font-size: 15px;
+	border: none;
+	color: white;
+	background-color:#7fb3d5;
+	border-radius: 10px;
+}
+
+.ventanaPaqueteCuatro{
+	margin: 0 auto;
+	text-align: center;
+}
+.ventanaPaqueteCuatro{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	position: fixed;
+	background-color: rgba(145,200,200);
+	top: 4%; 
+	left: 0;
+	transform: scale(0.95);
+}
+
+.promos .ventanaPaqueteCuatro #paquetes-slider{
+	margin: 0 auto;
+	width: 100%;
+}
+.ventanaPaqueteCuatro #sliderPaquetes{
+	display: flex;
+	width: 400%;
+}
+.ventanaPaqueteCuatro #reservar{
+	margin-top: 0.8rem;
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+
+}
+
+.cerrarPaqueteCuatro{
+	border: none;
+	border-radius: 2px;
+	background-color: #2874a6;
+	height: 2rem;
+	font-size: 17px;
+	color: white;
+	width: 25%;
+}
+
+
+
+
+
+
+
+
+
+

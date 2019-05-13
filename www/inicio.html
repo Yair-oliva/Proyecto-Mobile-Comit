@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+     <link rel="stylesheet" href="path/to/framework7-icons.css">
+    
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <div class="menu-navegacion"><a class="link external" href="inicio.html" class="link-nav">Home</a></div>
+            <div class="menu-navegacion"><a class="link external" href="vuelo.html" class="link-nav">Vuelo</a></div>
+            <div class="menu-navegacion"><a class="link external" href="hoteles.html" class="link-nav">Hoteles</a></div>
+            <div class="menu-navegacion"><a class="link external" href="promos.html" class="link-nav">Paquetes</a></div>
+            <div class="menu-navegacion"><a class="link external" href="testimonios.html" class="link-nav">Testimonios</a></div><!--links externos-->
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><img src="img/smart-travel.jpg" alt="">SMART TRAVEL</div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a><!--habilita la opcion del panel del costado-->
+                    </div>
+                </div>
+            </div>
+            <div class="pages navbar-through toolbar-through"><!-- el espacio que da entra el titulo Smart Travek y la pagina index-->
+                <div data-page="index" class="page"><!--pagina index-->
+                    <div class="page-content">
+                        <div class="content-block">
+                            <div class="swiper-container swiper-init demo-swiper">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/vola.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="img/dos.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="img/vola2.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="img/promoplaya.jpeg" alt=""></div>
+                                <!--<div class="swiper-slide">Slide 5</div>
+                                <div class="swiper-slide">Slide 6</div>
+                                <div class="swiper-slide">Slide 7</div>
+                                <div class="swiper-slide">Slide 8</div>
+                                <div class="swiper-slide">Slide 9</div>
+                                <div class="swiper-slide">Slide 10</div>-->
+                              </div>
+                            </div>
+                        </div>
+                        <!-- Each "cells" row should be wrapped with div class="row" -->
+                        <div class="row">
+                            <!-- Each "cell" has col-[width in percents] class -->
+                            <div class="col-50"><img src="img/ofertaVuelos.jpg" alt="" id="vuelo">
+                                <button id="vueloBoton"> Vuelos</button>
+                            </div>
+
+                            <div class="col-50"><img src="img/ofertaHoteles.jpg" alt="" id="hoteles">
+                                <button id="hotelesBoton"> Hoteles</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Each "cell" has col-[width in percents] class -->
+                            <div class="col-50"><img src="img/paquetes.jpg" alt="" id="paquetes">
+                                <button id="paquetesBoton">  Paquetes</button>
+                            </div>
+                            <div class="col-50"><img src="img/testimonios.jpg" alt="" id="testimonios">
+                                <button id="testimoniosBoton"> Testimonios</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <!--<div class="toolbar">
+                <div class="toolbar-inner">
+                    
+                    <a href="" class="link">Link 1</a>
+                    <a href="link1.html" class="link">Link 2</a>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

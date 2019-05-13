@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+    
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <div class="menu-navegacion"><a class="link external" href="inicio.html">Home</a></div>
+            <div class="menu-navegacion"><a class="link external" href="vuelo.html">Vuelo</a></div>
+            <div class="menu-navegacion"><a class="link external" href="hoteles.html">Hoteles</a></div>
+            <div class="menu-navegacion"><a class="link external" href="promos.html">Paquetes</a></div>
+            <div class="menu-navegacion"><a class="link external" href="testimonios.html">Testimonios</a></div><!--links externos-->
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <i class="icon icon-back" id="back"></i>
+                    <div class="center sliding" id="smart"><img src="img/smart-travel.jpg" alt="">SMART TRAVEL</div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a><!--habilita la opcion del panel del costado-->
+                    </div>
+                </div>
+            </div>
+            <div class="pages navbar-through toolbar-through"><!-- el espacio que da entra el titulo Smart Travek y la pagina index-->
+                <div data-page="index" class="page"><!--pagina index-->
+                    <div class="page-content">
+                        <div class="content-block" id="hoteles">
+                            <img src="img/banner-hoteles.jpg" alt="">
+                        </div>
+                             <div class="hoteles-recomendados">
+                                <div class="hotel">
+                                    <div class="hotel1">
+                                        <img src="img/hotel1.jpg" alt="">
+                                        <h3 class="ubicacion-hotel">Hotel en Buzios</h3>
+                                        <button id="abrirVentanaHotelUno" onclick="changeImgHotelBuzios()">Ver Detalles</button>
+                                            <div class="ventanaHotelPerola">
+                                                    <div id="hotel-slider">
+                                                        <div id="sliderHotel">
+                                                            <img id="slideHotelBuzios">
+                                                        </div>
+                                                    </div>
+                                                    <div class="textoHotel">
+                                                        <p> Hotel Pérola Búzios ofrece zona de ocio con piscina y bañera spa. Las playas Azeda y Azedinha están a 3,5 km del hotel de diseño. Las instalaciones incluyen sauna, jardín y masajes en el spa. Wi-Fi en las zonas comunes son gratuitos.Todas las habitaciones están equipadas con aire acondicionado,así como minibar y teléfono  Algunas unidades tienen jardín privado y bañera de hidromasaje en la terraza privada.</p>
+                                                    </div>  
+                                                <button id="reservar">Reservar</button>
+                                                <button class="cerrarVentanaHotelUno">Atras</button>
+                                            </div>
+                                    </div>
+                                    <div class="hotel1">
+                                        <img src="img/hotelLondres.jpg" alt="">
+                                        <h3 class="ubicacion-hotel">Hotel en Londres</h3>
+                                        <button id="abrirVentanaHotelDos" onclick="changeImgHotelLondres()">Ver Detalles</button>
+                                            <div class="ventanaHotelLondres">
+                                                    <div id="hotel-slider">
+                                                        <div id="sliderHotel">
+                                                            <img id="slideHotelLondres">
+                                                        </div>
+                                                    </div>
+                                                    <div class="textoHotel">
+                                                        <p> El Tune Hotel Liverpool Street se encuentra en Londres. La propiedad brinda recepción 24h y Wi-Fi gratuito en sus instalaciones. Las habitaciones son equipadas con aire acondicionado, TV pantalla plana, caja fuerte y baño con kit de aseo de cortesía.La cafetería ofrece bebidas calientes y snacks. El Big Ben queda a 6 km del Tune Hotel Liverpool Street, mientras que el London Eye se ubica a 20 minutos en coche.</p>
+                                                    </div>  
+                                                <button id="reservar">Reservar</button>
+                                                <button class="cerrarVentanaHotelDos">Atras</button>
+                                            </div>
+                                    </div>
+                                    <div class="hotel1">
+                                        <img src="img/hotelRoma.jpg" alt="">
+                                        <h3 class="ubicacion-hotel">Hotel en Roma</h3>
+                                        <button id="abrirVentanaHotelTres" onclick="changeImgHotelRoma()">Ver Detalles</button>
+                                            <div class="ventanaHotelRoma">
+                                                    <div id="hotel-slider">
+                                                        <div id="sliderHotel">
+                                                            <img id="slideHotelRoma">
+                                                        </div>
+                                                    </div>
+                                                    <div class="textoHotel">
+                                                        <p>Si decides alojarte en Fragrance Hotel St. Peter, te encontrarás en una fantástica zona de Roma (Vaticano) y estarás a menos de cinco minutos en coche de Capilla Sixtina y Hospital Bambin Gesù. Además, este hotel se encuentra a 1 km de Plaza de San Pedro y a 1,7 km de Castillo de Sant'Angelo. Te sentirás como en tu propia casa en cualquiera de las 29 habitaciones con aire acondicionado, minibar y televisor de plasma.</p>
+                                                    </div>  
+                                                <button id="reservar">Reservar</button>
+                                                <button class="cerrarVentanaHotelTres">Atras</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <!--<div class="toolbar">
+                <div class="toolbar-inner">
+                    
+                    <a href="" class="link">Link 1</a>
+                    <a href="link1.html" class="link">Link 2</a>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

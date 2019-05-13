@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+    <script src="js/hammer.min.js"></script>
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <div class="menu-navegacion"><a class="link external" href="inicio.html">Home</a></div>
+            <div class="menu-navegacion"><a class="link external" href="vuelo.html">Vuelo</a></div>
+            <div class="menu-navegacion"><a class="link external" href="hoteles.html">Hoteles</a></div>
+            <div class="menu-navegacion"><a class="link external" href="promos.html">Paquetes</a></div>
+            <div class="menu-navegacion"><a class="link external" href="testimonios.html">Testimonios</a></div><!--links externos-->
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <i class="icon icon-back" id="back"></i>  
+                    <div class="center sliding"id="smart"><img src="img/smart-travel.jpg" alt="">SMART TRAVEL</div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a><!--habilita la opcion del panel del costado-->
+                    </div>
+                </div>
+            </div>
+            <div class="pages navbar-through toolbar-through"><!-- el espacio que da entra el titulo Smart Travek y la pagina index-->
+                <div data-page="index" class="page"><!--pagina index-->
+                    <div class="page-content">
+                        <div class="content-block" id="vuelo">
+                            <img src="img/vuelos.jpg" alt="">
+                        </div>
+                     
+                         
+                            <div class="vuelosRecomendados">
+                                <div class="grid">
+                                    <div class="imagenVuelos">
+                                        <img src="img/nuevayork.jpg" alt="">
+                                        <p>New York</p>
+                                        <a href="" id="abrirVentanaNuevaYork" onclick="changeImgNY()">[+]info.</a>
+                                            <div class="ventanaNuevaYork">
+                                                    <div id="c-slider">
+                                                        <div id="slider">
+                                                           <img id="slideNY">
+                                                        </div>
+                                                    </div>
+                                                <div class="texto">
+                                                    <p>La ciudad de Nueva York, también conocida como La Gran Manzana, es una de las más espectaculares del mundo, con enormes rascacielos, vistosas luces y una increíble diversidad de culturas que le dan una personalidad única y vibrante. Nueva York está siempre a la vanguardia en todos los sentidos.</p>
+                                                </div>
+                                                <button id="comprar">Comprar</button>
+                                                <button class="cerrarVentanaNuevaYork">Atras</button>
+                                            </div>
+                                    </div>
+                                    <div class="imagenVuelos">
+                                        <img src="img/venecia.jpg" alt="">
+                                        <p>Venecia</p>
+                                        <a href="" id="abrirVentanaVenecia" onclick="changeImgVenecia()">[+]info.</a>
+                                            <div class="ventanaVenecia">
+                                                    <div id="c-slider">
+                                                        <div id="slider">
+                                                            <img id="slideVenecia">
+                                                        </div>
+                                                    </div>
+                                                <div class="texto">
+                                                    <p>Venecia tiene una gran riqueza cultural y arquitectónica como el Palacio Ducal, La Basílica de Santa María della Salute o la Plaza de San Marcos en la que se encuentra la Basílica con el mismo nombre. Después de mirar vuelos baratos a Venecia es el momento de hacer las maletas y viajar a esta enigmática ciudad.</p>
+                                                </div>
+                                                <button id="comprar">Comprar</button>
+                                                <button class="cerrarVentanaVenecia">Atras</button>
+                                            </div>
+                                    </div>
+                                    <div class="imagenVuelos">
+                                        <img src="img/miami.jpg" alt="">
+                                        <p>Miami</p>
+                                        <a href="" id="abrirVentanaMiami" onclick="changeImgMiami()">[+]info.</a>
+                                            <div class="ventanaMiami">
+                                                    <div id="c-slider">
+                                                        <div id="slider">
+                                                            <img id="slideMiami">
+                                                        </div>
+                                                    </div>
+                                                <div class="texto">
+                                                    <p>Miami se sitúa en el extremo sur de Florida y a orillas del Caribe, por lo que cuenta con un clima cálido todo el año. En esta ciudad va a poder encontrar una variada oferta de esparcimiento, circuitos gastronómicos, numerosas atracciones.No desaproveche ningún vuelo barato a Miami para descubrir sus exclusivas playas</p>
+                                                </div>
+                                                <button id="comprar">Comprar</button>
+                                                <button class="cerrarVentanaMiami">Atras</button>
+                                            </div>
+                                    </div>
+                                    <div class="imagenVuelos">
+                                        <img src="img/roma.jpg" alt="">
+                                        <p>Roma</p>
+                                        <a href="" id="abrirVentanaRoma" onclick="changeImgRoma()">[+]info.</a>
+                                            <div class="ventanaRoma">
+                                                    <div id="c-slider">
+                                                        <div id="slider">
+                                                            <img id="slideRoma">
+                                                        </div>
+                                                    </div>
+                                                <div class="texto">
+                                                    <p>La capital italiana es una de esas ciudades que todo el mundo debería visitar al menos una vez en la vida. La emoción de pensar que los adoquines que pisas tienen siglos y siglos de historia solamente puede vivirse con un viaje a Roma. Es un gran museo al aire libre, lleno de rincones emblemáticos, una luz mágica y una comida tan deliciosa.</p>
+                                                </div>
+                                                <button id="comprar">Comprar</button>
+                                                <button class="cerrarVentanaRoma">Atras</button>
+                                            </div>
+                                    </div>
+                                    <div class="imagenVuelos">
+                                        <img src="img/londres.jpg" alt="">
+                                        <p>Londres</p>
+                                        <a href="" id="abrirVentanaLondres" onclick="changeImgLondres()">[+]info.</a>
+                                            <div class="ventanaLondres">
+                                                    <div id="c-slider">
+                                                        <div id="slider">
+                                                            <img id="slideLondres">
+                                                        </div>
+                                                    </div>
+                                                <div class="texto">
+                                                    <p>Londres, capital de Inglaterra y del Reino Unido, es la ciudad más grande de Europa. Sus casi 8 millones de habitantes garantizan el ambiente multicultural y la atmósfera única de Londres en la que se mezclan turistas, estudiantes que quieren perfeccionar su inglés y lugareños.</p>
+                                                </div>
+                                                <button id="comprar">Comprar</button>
+                                                <button class="cerrarVentanaLondres">Atras</button>
+                                            </div>
+                                    </div>
+                                    <div class="imagenVuelos">
+                                        <img src="img/paris.jpg" alt="">
+                                        <p>Paris</p>
+                                        <a href="" id="abrirVentanaParis" onclick="changeImgParis()">[+]info.</a>
+                                            <div class="ventanaParis">
+                                                    <div id="c-slider">
+                                                        <div id="slider">
+                                                            <img id="slideParis">
+                                                        </div>
+                                                    </div>
+                                                <div class="texto">
+                                                    <p>Paris ya te lleva a imaginar cómo debe ser pasear por sus bellas calles, visitar sus fantásticos museos, sus tiendas exuberantes de grande marcas y, como no, subir a la Torre Eiffel. Es una experiencia que se debería realizar al menos una vez en la vida, su gastronomía, su enología y su vida cultural son también atractivos turísticos muy importantes.
+                                                    </p>
+                                                </div>
+                                                <button id="comprar">Comprar</button>
+                                                <button class="cerrarVentanaParis">Atras</button>
+                                            </div>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
